@@ -3,26 +3,32 @@ Colorful_cmd_Marslo
 
 Make Windows default command line colorfully
 
-# Needed Tools and files:
-  - Ansicon  
-	- A bat file  
+# The Colorful CMD Prompt
 
-# Steps:  
+## Needed Tools and files:
+  - Ansicon  
+  - A bat file  
+
+## Steps:  
 	- ANSICON:  
 		○ Download Ansicon from http://adoxa.3eeweb.com/ansicon/  
 		○ Install:   
+                 <pre><code>
 		 > cd ansi160\x86\                                                     
 		 > ansicon.exe -i                                                    
-		                                                                     
+		 </code><pre>
 	
 	- Create bat file:
 		○ Characters help by using :  
-		 > prompt /?                                                          
+	         <pre><code>
+		 > prompt /?
+		 </code></pre>
 		                                                                      
 		○ Example (run.bat):  
+		 <pre><code>
 		 @echo off                                                           
 		 prompt $E[1;31m$d$E[1;32m$s$t$s$E[1;31m$g$g$s$E[0;33m               
-		                                                                     
+		 </code></pre>                                                                    
 	
 	- Add bat file into Regedit:  
 		○ Open Regedit: Ctrl+R -> regedit  
@@ -31,3 +37,26 @@ Make Windows default command line colorfully
 			§ Type:             String  
 			§ Value Name:       AutoRun  
 			§ Value Data:       [Path_Of_Bat_file]  
+
+----------------------------
+# Modified the Font in CMD
+
+## Add the customize Font:
+	- Go to: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Console\TrueTypeFont
+	- Create Font Type:
+		○ Type:                  String
+		○ Key Name:       Only defined by '0' (zero)
+			§ E.g.: '0', '00', … , '00..0'
+		○ Key Value:         Font Name (Only monospace series)
+		○ E.g.: 
+			§ '000'    =>   Monaco
+			§ '0000' =>    Courier New
+## Set code page:
+	- Running in command line: (or chcp 850)
+	<pre><code>
+	 > chcp 437                                                                
+	</code></pre>                                                                           
+
+## Settings:
+	- Right-Click -> Propties -> Font
+
