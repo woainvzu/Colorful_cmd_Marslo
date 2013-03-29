@@ -5,7 +5,7 @@ Make Windows default command line colorfully
 
 # The Colorful CMD Prompt
 Truth:
-![Truth|https://github.com/woainvzu/Colorful_cmd_Marslo/blob/master/Images/Truth.png?raw=true]
+![Truth](https://github.com/woainvzu/Colorful_cmd_Marslo/blob/master/Images/Truth.png)
 
 ## Needed Tools and files:
   - Ansicon
@@ -50,7 +50,7 @@ Truth:
     </code>
     </pre>
     - E.g.:
-    ![font|https://github.com/woainvzu/Colorful_cmd_Marslo/blob/master/Images/font.png?raw=true]
+    ![font](https://github.com/woainvzu/Colorful_cmd_Marslo/blob/master/Images/font.png)
 
 ----------------------------
 # Modified the Font in CMD
@@ -85,5 +85,5 @@ Truth:
 
 ## Settings:
 - Right-Click -> Propties -> Font
-- E.g.:
-![propties|https://github.com/woainvzu/Colorful_cmd_Marslo/blob/master/Images/Propties.png?raw=true]
+- E.g.:   
+![propties](https://github.com/woainvzu/Colorful_cmd_Marslo/blob/master/Images/Propties.png)
