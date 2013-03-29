@@ -4,6 +4,8 @@ Colorful_cmd_Marslo
 Make Windows default command line colorfully
 
 # The Colorful CMD Prompt
+Truth:
+![Truth|https://github.com/woainvzu/Colorful_cmd_Marslo/blob/master/Images/Truth.png?raw=true]
 
 ## Needed Tools and files:
   - Ansicon
@@ -47,6 +49,8 @@ Make Windows default command line colorfully
     Value Data:       [Path_Of_Bat_file]
     </code>
     </pre>
+    - E.g.:
+    ![font|https://github.com/woainvzu/Colorful_cmd_Marslo/blob/master/Images/font.png?raw=true]
 
 ----------------------------
 # Modified the Font in CMD
@@ -81,5 +85,5 @@ Make Windows default command line colorfully
 
 ## Settings:
 - Right-Click -> Propties -> Font
-E.g.:
-
+- E.g.:
+![propties|https://github.com/woainvzu/Colorful_cmd_Marslo/blob/master/Images/Propties.png?raw=true]
