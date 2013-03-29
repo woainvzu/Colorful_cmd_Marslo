@@ -11,12 +11,14 @@ Make Windows default command line colorfully
 
 ## Steps:  
 - ANSICON:  
-	○ Download Ansicon from http://adoxa.3eeweb.com/ansicon/  
-	○ Install:   
-        <pre><code>
-	 > cd ansi160\x86\                                                     
-	 > ansicon.exe -i                                                    
-	</code><pre>
+○ Download Ansicon from http://adoxa.3eeweb.com/ansicon/  
+○ Install:
+<pre>
+<code>
+	> cd ansi160\x86\                                                     
+	> ansicon.exe -i                                                    
+</code>
+<pre>
 	
 - Create bat file:
 	○ Characters help by using :  
