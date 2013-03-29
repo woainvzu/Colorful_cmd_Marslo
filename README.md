@@ -50,7 +50,7 @@ Truth:
     </code>
     </pre>
     - E.g.:   
-    ![font](https://github.com/woainvzu/Colorful_cmd_Marslo/blob/master/Images/font.png?raw=true)
+    ![Command_processor](https://github.com/woainvzu/Colorful_cmd_Marslo/blob/master/Images/Machine_Command%20Processor.png?raw=true)
 
 ----------------------------
 # Modified the Font in CMD
@@ -74,6 +74,8 @@ Truth:
     ...
     </code>
     </pre>
+    - E.g.:  
+    ![font](https://github.com/woainvzu/Colorful_cmd_Marslo/blob/master/Images/font.png?raw=true)
 
 ## Set code page:
 - Running in command line: (or chcp 850)
