@@ -15,8 +15,8 @@ Make Windows default command line colorfully
     - Install:
     <pre>
     <code>
-    > cd ansi160\x86\
-    > ansicon.exe -i
+    > cd ansi160\x86\  
+    > ansicon.exe -i  
     </code>
     <pre>
 
