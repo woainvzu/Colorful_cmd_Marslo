@@ -11,42 +11,42 @@ Make Windows default command line colorfully
 
 ## Steps:
 - ANSICON:
--* Download Ansicon from http://adoxa.3eeweb.com/ansicon/
--** Install:
-<pre>
-<code>
-> cd ansi160\x86\
-> ansicon.exe -i
-</code>
-<pre>
+    - Download Ansicon from http://adoxa.3eeweb.com/ansicon/
+    - Install:
+    <pre>
+    <code>
+    > cd ansi160\x86\
+    > ansicon.exe -i
+    </code>
+    <pre>
 
 - Create bat file:
--* Characters help by using :
-<pre>
-<code>
-> prompt /?
-</code>
-</pre>
+    -* Characters help by using :
+    <pre>
+    <code>
+    > prompt /?
+    </code>
+    </pre>
 
--* Example (run.bat):
-<pre>
-<code>
-@echo
-prompt $E[1;31m$d$E[1;32m$s$t$s$E[1;31m$g$g$s$E[0;33m
-</code>
-</pre>
+    -* Example (run.bat):
+    <pre>
+    <code>
+    @echo
+    prompt $E[1;31m$d$E[1;32m$s$t$s$E[1;31m$g$g$s$E[0;33m
+    </code>
+    </pre>
 
 - Add bat file into Regedit:
--* Open Regedit: Ctrl+R -> regedit
--* Path: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor
-Key:
-<pre>
-<code>
-Type:             String
-Value Name:       AutoRun
-Value Data:       [Path_Of_Bat_file]
-</code>
-</pre>
+    -* Open Regedit: Ctrl+R -> regedit
+    -* Path: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor
+    Key:
+    <pre>
+    <code>
+    Type:             String
+    Value Name:       AutoRun
+    Value Data:       [Path_Of_Bat_file]
+    </code>
+    </pre>
 
 ----------------------------
 # Modified the Font in CMD
@@ -54,23 +54,22 @@ Value Data:       [Path_Of_Bat_file]
 ## Add the customize Font:
 - Go to: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Console\TrueTypeFont
 - Create Font Type:
--* Type:                  String
--* Key Name:       Only defined by '0' (zero)
-<pre>
-<code>
-    E.g.: '0', '00', ... , '00..0'
-</code>
-</pre>
-
--* Key Value:         Font Name (Only monospace series)
-E.g.:
-<pre>
-<code>
-	'000'    =>   Monaco
-	'0000' =>    Courier New
-    ...
-</code>
-</pre>
+    -* Type:                  String
+    -* Key Name:       Only defined by '0' (zero)
+    <pre>
+    <code>
+        E.g.: '0', '00', ... , '00..0'
+    </code>
+    </pre>
+    -* Key Value:         Font Name (Only monospace series)
+    E.g.:
+    <pre>
+    <code>
+        '000'    =>   Monaco
+        '0000' =>    Courier New
+        ...
+    </code>
+    </pre>
 
 ## Set code page:
 - Running in command line: (or chcp 850)
