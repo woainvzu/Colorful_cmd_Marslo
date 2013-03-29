@@ -21,14 +21,14 @@ Make Windows default command line colorfully
     <pre>
 
 - Create bat file:
-    -* Characters help by using :
+    - Characters help by using :
     <pre>
     <code>
     > prompt /?
     </code>
     </pre>
 
-    -* Example (run.bat):
+    - Example (run.bat):
     <pre>
     <code>
     @echo
@@ -37,8 +37,8 @@ Make Windows default command line colorfully
     </pre>
 
 - Add bat file into Regedit:
-    -* Open Regedit: Ctrl+R -> regedit
-    -* Path: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor
+    - Open Regedit: Ctrl+R -> regedit
+    - Path: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor
     Key:
     <pre>
     <code>
@@ -54,20 +54,20 @@ Make Windows default command line colorfully
 ## Add the customize Font:
 - Go to: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Console\TrueTypeFont
 - Create Font Type:
-    -* Type:                  String
-    -* Key Name:       Only defined by '0' (zero)
+    - Type:                  String
+    - Key Name:       Only defined by '0' (zero)
     <pre>
     <code>
-        E.g.: '0', '00', ... , '00..0'
+    E.g.: '0', '00', ... , '00..0'
     </code>
     </pre>
-    -* Key Value:         Font Name (Only monospace series)
+    - Key Value:         Font Name (Only monospace series)
     E.g.:
     <pre>
     <code>
-        '000'    =>   Monaco
-        '0000' =>    Courier New
-        ...
+    '000'    =>   Monaco
+    '0000' =>    Courier New
+    ...
     </code>
     </pre>
 
