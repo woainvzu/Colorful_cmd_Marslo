@@ -53,7 +53,7 @@ Truth:
     ![Command_processor](https://github.com/woainvzu/Colorful_cmd_Marslo/blob/master/Images/Machine_Command%20Processor.png?raw=true)
 
 ----------------------------
-# Modified the Font in CMD
+# Modify the Font in CMD
 
 ## Add the customize Font:
 - Go to: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Console\TrueTypeFont
