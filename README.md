@@ -33,13 +33,10 @@ prompt $E[1;31m$d$E[1;32m$s$t$s$E[1;31m$g$g$s$E[0;33m
     - Open Regedit: Ctrl+R -> regedit
     - Path: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor
     Key:
-    <pre>
-    <code>
-    Type:             String
-    Value Name:       AutoRun
-    Value Data:       [Path_Of_Bat_file]
-    </code>
-    </pre>
+<pre><code>Type:             String
+Value Name:       AutoRun
+Value Data:       [Path_Of_Bat_file]
+</code></pre>
     - E.g.:   
     ![Command_processor](https://github.com/woainvzu/Colorful_cmd_Marslo/blob/master/Images/Machine_Command%20Processor.png?raw=true)
 
@@ -51,30 +48,21 @@ prompt $E[1;31m$d$E[1;32m$s$t$s$E[1;31m$g$g$s$E[0;33m
 - Create Font Type:
     - Type:                  String
     - Key Name:       Only defined by '0' (zero)
-    <pre>
-    <code>
-    E.g.: '0', '00', ... , '00..0'
-    </code>
-    </pre>
+<pre><code>E.g.: '0', '00', ... , '00..0'
+</code></pre>
     - Key Value:         Font Name (Only monospace series)
     E.g.:
-    <pre>
-    <code>
-    '000'    =>   Monaco
-    '0000' =>    Courier New
-    ...
-    </code>
-    </pre>
+<pre><code>'000'    =>   Monaco
+'0000' =>    Courier New
+...
+</code></pre>
     - E.g.:  
     ![font](https://github.com/woainvzu/Colorful_cmd_Marslo/blob/master/Images/font.png?raw=true)
 
 ## Set code page:
 - Running in command line: (or chcp 850)
-<pre>
-<code>
-> chcp 437
-</code>
-</pre>
+<pre><code>> chcp 437
+</code></pre>
 
 ## Settings:
 - Right-Click -> Propties -> Font
