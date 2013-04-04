@@ -15,28 +15,19 @@ Truth:
 - ANSICON:
     - Download Ansicon from http://adoxa.3eeweb.com/ansicon/
     - Install:
-    <pre>
-    <code>
-    > cd ansi161\x86\
-    > ansicon.exe -i
-    </code>
-    </pre>
+<pre><code>> cd ansi161\x86\
+> ansicon.exe -i
+</code></pre>
 
 - Create bat file:
     - Characters help by using :
-    <pre>
-    <code>
-    > prompt /?
-    </code>
-    </pre>
+<pre><code>> prompt /?
+</code></pre>
 
     - Example (run.bat):
-    <pre>
-    <code>
-    @echo
-    prompt $E[1;31m$d$E[1;32m$s$t$s$E[1;31m$g$g$s$E[0;33m
-    </code>
-    </pre>
+<pre><code>@echo
+prompt $E[1;31m$d$E[1;32m$s$t$s$E[1;31m$g$g$s$E[0;33m
+</code></pre>
 
 - Add bat file into Regedit:
     - Open Regedit: Ctrl+R -> regedit
