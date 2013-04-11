@@ -1,0 +1,29 @@
+@echo off
+set filecompletion=cd chdir cdd md mkdir rd rmdir pushd:dirs; 
+set .txt="C:\Program Files\Vim\vim73\gvim.exe";
+set titleprompt=$P$g
+
+:: Command Alias
+alias l=dir
+alias c=cls
+alias gh=`cd C:\`
+alias ff=firefox.exe
+alias tf=dir /[d] /od
+alias tcal=vim "C:\Program Files\JPSoft\TCCLE13\tcstart.btm"
+alias nd=`md /s %1 && %1\`
+alias openit=`explorer.exe %1`
+alias pwd=cd
+alias exp=`explorer.exe .`
+alias ipy=ipython --style=marslo --profile=marslo --colors=linux --ConsoleWidget.font_size=12 --IPythonWidget.font_family=Monaco --pylab=inline
+
+:: Directory Alias
+alias desk:=%userprofile\desktop\
+alias prog:=%programfiles\
+alias tl:=C:\Marslo\Tools\
+alias tcp:=%programfiles\JPSoft\TCCLE13\
+
+:: Keybord Alias
+alias @@ctrl-f12=@option
+alias @alt-a=@option
+
+set colordir=dirs:bri green;txt:bri red;
