@@ -77,4 +77,4 @@ Value Data:       [Path_Of_Bat_file]
 
 ----------------------------
 # Configuration about TCC/LE:
-- Copy the **tcstart.btm** to `PROGRAMFILES`\JPSoft\TCCLE13
+- Copy the **tcstart.btm** to `PROGRAMFILES\JPSoft\TCCLE13`
