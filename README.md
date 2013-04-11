@@ -68,3 +68,13 @@ Value Data:       [Path_Of_Bat_file]
 - Right-Click -> Propties -> Font
 - E.g.:   
 ![propties](https://github.com/woainvzu/Colorful_cmd_Marslo/blob/master/Images/Propties.png?raw=true)
+
+
+----------------------------
+# Configuration about Console:
+- Copy the **console.xml** to `%APPDATA%` folder
+
+
+----------------------------
+# Configuration about TCC/LE:
+- Copy the **tcstart.btm** to `PROGRAMFILES`\JPSoft\TCCLE13
