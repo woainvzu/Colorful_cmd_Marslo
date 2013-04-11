@@ -72,7 +72,7 @@ Value Data:       [Path_Of_Bat_file]
 
 ----------------------------
 # Configuration about Console:
-- Copy the **console.xml** to `%APPDATA%`\Console folder
+- Copy the **console.xml** to `%APPDATA%\Console` folder
 
 
 ----------------------------
