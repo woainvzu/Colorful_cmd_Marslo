@@ -30,8 +30,8 @@ prompt $E[1;31m$d$E[1;32m$s$t$s$E[1;31m$g$g$s$E[0;33m
 </code></pre>
 
 - Add bat file into Regedit:
-    - Open Regedit: Ctrl+R -> regedit
-    - Path: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor
+    - Open Regedit: **Ctrl+R** -> **regedit**
+    - Path: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor**
     Key:
 <pre><code>Type:             String
 Value Name:       AutoRun
@@ -60,14 +60,24 @@ Value Data:       [Path_Of_Bat_file]
     ![font](https://github.com/woainvzu/Colorful_cmd_Marslo/blob/master/Images/font.png?raw=true)
 
 ## Set code page:
-- Running in command line: (or chcp 850)
+- Running in command line: (or **chcp 850**)
 <pre><code>> chcp 437
 </code></pre>
+- Code page regist location: **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Nls\CodePage**
 
 ## Settings:
-- Right-Click -> Propties -> Font
+- **Right-Click** -> **Propties** -> **Font**
 - E.g.:   
 ![propties](https://github.com/woainvzu/Colorful_cmd_Marslo/blob/master/Images/Propties.png?raw=true)
+
+
+----------------------------
+# Set aliases in Command Line(Default Command Line)
+- Create **.cmd** file (E.g.: %WINDIR%\alias.cmd)
+    - It can be copied from folder **Default_CommandLine\Aliases\**
+- Add the full file path into regist: **HKEY_CURRENT_USER\Software\Microsoft\Command Processor**
+    - CMD command: <pre><code>c:> reg add "HKCU\SOFTWARE\Microsoft\Command Processor" /v AutoRun /t REG_SZ /d "%WINDIR%\autorun.cmd"
+    </code></pre>
 
 
 ----------------------------
