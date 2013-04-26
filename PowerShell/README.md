@@ -1,5 +1,5 @@
 # Aliases File Location:
-Save the file into `%USERPROFILE%Documents`
+Save the file into `%USERPROFILE%\Documents`
 
 
 # Error
