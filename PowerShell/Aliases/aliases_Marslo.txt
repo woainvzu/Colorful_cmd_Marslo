@@ -1,0 +1,13 @@
+c       clear
+l       ls -l
+la      ls -al
+tree    tree .
+al      cd "C:\Marslo\Job\Summa\FE Tools\LotusNotes\AutoLotusNotes"
+ats     cd "C:\Marslo\Job\Summa\FE Tools\AutoScritps"
+desk    cd "C:\Users\jiaoolii\Desktop"
+prog    cd "C:\Program Files"
+gr      cd "c:\"
+gh      cd "C:\Users\jiaoolii"
+wp      cd "C:\Users\jiaoolii\Documents\WindowsPowerShell"
+ex      explorer.exe .
+openit  explorer.ext %1
