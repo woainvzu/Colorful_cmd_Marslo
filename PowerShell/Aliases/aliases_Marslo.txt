@@ -4,6 +4,7 @@ la      ls -al
 l.      ls hidden file
 t.      tree the hidden file
 tree    tree .
+..      cd ..
 al      cd "C:\Marslo\Job\Summa\FE Tools\LotusNotes\AutoLotusNotes"
 ats     cd "C:\Marslo\Job\Summa\FE Tools\AutoScritps"
 desk    cd "C:\Users\jiaoolii\Desktop"

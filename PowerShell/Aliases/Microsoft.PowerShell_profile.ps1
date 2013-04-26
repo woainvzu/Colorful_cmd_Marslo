@@ -1,5 +1,6 @@
 Set-Alias c Clear-Host
 Set-Alias l Get-ChildItem
+Set-Alias l color-ls
 function la
 {
     $currentpath = Get-Location
@@ -18,6 +19,10 @@ function tree
 {
     $currentpath = Get-Location
     Get-ChildItem $currentpath -recurse
+}
+function ..
+{
+    Set-Location ..
 }
 function al
 {
@@ -66,4 +71,42 @@ function alias
 function wp
 {
     Set-Location "C:\Users\jiaoolii\Documents\WindowsPowerShell"
+}
+
+function color-ls {
+  $regex_opts = ([System.Text.RegularExpressions.RegexOptions]::IgnoreCase -bor [System.Text.RegularExpressions.RegexOptions]::Compiled)
+
+  $fore = $Host.UI.RawUI.ForegroundColor
+  $compressed = New-Object System.Text.RegularExpressions.Regex('\.(zip|tar|gz|rar)$', $regex_opts)
+  $executable = New-Object System.Text.RegularExpressions.Regex('\.(exe|bat|cmd|ps1|psm1|vbs|rb|reg|dll|o|lib)$', $regex_opts)
+  $executable = New-Object System.Text.RegularExpressions.Regex('\.(exe|bat|cmd|ps1|psm1|vbs|rb|reg|dll|o|lib)$', $regex_opts)
+  $source = New-Object System.Text.RegularExpressions.Regex('\.(py|pl|cs|rb|h|cpp)$', $regex_opts)
+  $text = New-Object System.Text.RegularExpressions.Regex('\.(txt|cfg|conf|ini|csv|log|xml)$', $regex_opts)
+
+  Invoke-Expression ("Get-ChildItem $args") |
+    %{
+      if ($_.GetType().Name -eq 'DirectoryInfo') {
+        $Host.UI.RawUI.ForegroundColor = 'Green'
+        $_
+        $Host.UI.RawUI.ForegroundColor = $fore
+      } elseif ($compressed.IsMatch($_.Name)) {
+        $Host.UI.RawUI.ForegroundColor = 'Red'
+        $_
+        $Host.UI.RawUI.ForegroundColor = $fore
+      } elseif ($executable.IsMatch($_.Name)) {
+        $Host.UI.RawUI.ForegroundColor = 'Yellow'
+        $_
+        $Host.UI.RawUI.ForegroundColor = $fore
+      } elseif ($text.IsMatch($_.Name)) {
+        $Host.UI.RawUI.ForegroundColor = 'Cyan'
+        $_
+        $Host.UI.RawUI.ForegroundColor = $fore
+      } elseif ($source.IsMatch($_.Name)) {
+        $Host.UI.RawUI.ForegroundColor = 'DarkGreen'
+        $_
+        $Host.UI.RawUI.ForegroundColor = $fore
+      } else {
+        $_
+      }
+    }
 }
