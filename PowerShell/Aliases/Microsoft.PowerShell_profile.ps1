@@ -5,6 +5,15 @@ function la
     $currentpath = Get-Location
     Get-ChildItem $currentpath -force
 }
+function l.
+{
+    # Get-ChildItem . -Force | Where-Object { $_.Attributes -like "*Hidden*" } | Select FullName
+    Get-ChildItem . -Force | Where-Object { $_.Attributes -like "*Hidden*" }
+}
+function t.
+{
+    Get-ChildItem . -Recurse -Force | Where { ($_.Attributes.ToString() -Split ", ") -Contains "Hidden" } | Select FullName
+}
 function tree
 {
     $currentpath = Get-Location

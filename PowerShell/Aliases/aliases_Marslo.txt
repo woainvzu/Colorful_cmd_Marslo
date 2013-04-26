@@ -1,6 +1,8 @@
 c       clear
 l       ls -l
 la      ls -al
+l.      ls hidden file
+t.      tree the hidden file
 tree    tree .
 al      cd "C:\Marslo\Job\Summa\FE Tools\LotusNotes\AutoLotusNotes"
 ats     cd "C:\Marslo\Job\Summa\FE Tools\AutoScritps"
