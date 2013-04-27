@@ -110,3 +110,32 @@ function color-ls {
       }
     }
 }
+
+function prompt
+{
+
+    # Set Window Title
+    $host.UI.RawUI.WindowTitle = "$ENV:USERNAME@$ENV:COMPUTERNAME - $(Get-Location)"
+
+    # Set Prompt
+    # Write-Host (Get-Date -Format G) -NoNewline -ForegroundColor Red
+    # Write-Host " [" -NoNewline -ForegroundColor DarkGray
+    # Write-Host $(get-location) -ForegroundColor Green -NoNewline
+    # Write-Host "] " -NoNewline -ForegroundColor DarkGray
+    Write-Host (Get-Date -UFormat "%y/%m/%d") -NoNewline -ForegroundColor Red
+    Write-Host (Get-Date -UFormat " %r ") -NoNewline -ForegroundColor Green
+
+    # Check for Administrator elevation
+    $wid=[System.Security.Principal.WindowsIdentity]::GetCurrent()
+    $prp=new-object System.Security.Principal.WindowsPrincipal($wid)
+    $adm=[System.Security.Principal.WindowsBuiltInRole]::Administrator
+    $IsAdmin=$prp.IsInRole($adm)
+    if ($IsAdmin) {
+        Write-Host ">>" -NoNewline -ForegroundColor Red
+        return " "
+    }
+    else {
+        Write-Host ">" -NoNewline -ForegroundColor Gray
+        return " "
+    }
+ }
