@@ -1,5 +1,5 @@
 # Aliases File Location:
-Save the file into `%USERPROFILE%Documents`
+Save the file into `%USERPROFILE%\Documents`
 
 
 # Error
@@ -11,6 +11,9 @@ Save the file into `%USERPROFILE%Documents`
 ### Soluction
 <pre><code>set-executionpolicy remotesigned</code></pre>
 
+
+# Truth:
+![powershell](https://github.com/woainvzu/Colorful_cmd_Marslo/blob/master/Images/powershell.png?raw=true)
 
 
 
