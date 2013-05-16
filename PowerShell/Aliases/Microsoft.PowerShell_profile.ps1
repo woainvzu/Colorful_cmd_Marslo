@@ -1,3 +1,4 @@
+[Console]::CursorSize = 10
 Set-Alias c Clear-Host
 Set-Alias l Get-ChildItem
 Set-Alias l color-ls
@@ -31,6 +32,10 @@ function al
 function ats
 {
     Set-Location "C:\Marslo\Job\Summa\FE Tools\AutoScritps"
+}
+function lno
+{
+    Set-Location "C:\Marslo\Job\Summa\FE Tools\AutoScritps\LotusNotesOpt"
 }
 function desk
 {
@@ -119,11 +124,11 @@ function prompt
 
     # Set Prompt
     # Write-Host (Get-Date -Format G) -NoNewline -ForegroundColor Red
-    # Write-Host " [" -NoNewline -ForegroundColor DarkGray
-    # Write-Host $(get-location) -ForegroundColor Green -NoNewline
-    # Write-Host "] " -NoNewline -ForegroundColor DarkGray
-    Write-Host (Get-Date -UFormat "%y/%m/%d") -NoNewline -ForegroundColor Red
+    Write-Host (Get-Date -UFormat "%Y/%m/%d") -NoNewline -ForegroundColor Red
     Write-Host (Get-Date -UFormat " %r ") -NoNewline -ForegroundColor Green
+    # Write-Host " [" -NoNewline -ForegroundColor DarkGray
+    # Write-Host $(get-location) -ForegroundColor DarkGray -NoNewline
+    # Write-Host "] " -NoNewline -ForegroundColor DarkGray
 
     # Check for Administrator elevation
     $wid=[System.Security.Principal.WindowsIdentity]::GetCurrent()
@@ -139,3 +144,10 @@ function prompt
         return " "
     }
  }
+# functio mgp
+# {
+    # param(
+            # $strs
+        # )
+    # "C:/Marslo/Tools/Softwares/Programming/Ruby/Devkit/bin/grep.exe" $strs . | "C:/Marslo/Tools/Softwares/Programming/Ruby/Devkit/bin/grep.exe" -v '\.svn\|\.git\|tags'
+# }
