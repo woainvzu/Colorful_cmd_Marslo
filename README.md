@@ -93,6 +93,7 @@ Value Data:       [Path_Of_Bat_file]
 ----------------------------
 # Configuration about Ansicon:
 - The color prompt reference: "http://adoxa.hostmyway.net/ansicon/ANSI Prompt Colours.txt"
+
 ## Brief Introduction:
 - **3x** and **4x**:
     - **3x**: Front Color
