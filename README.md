@@ -127,5 +127,6 @@ Value Data:       [Path_Of_Bat_file]
         - `5`: Magenta
         - `6`: Cyan
         - `7`: White
+
 ## Examples:
 ![ansiconcolor](https://github.com/woainvzu/Colorful_cmd_Marslo/blob/master/Images/ansicon_color.png?raw=true)
