@@ -105,7 +105,7 @@ Value Data:       [Path_Of_Bat_file]
     - a (control dark/light front color):
         - `0 == a`: Set the **dark** front color
         - `1 == a`: Set the **light** front color
-	- `7 == a`: Reversal the front color and background color
+	    - `7 == a`: Reversal the front color and background color
     - b (front color):
         - `1`: Red
         - `2`: Green
