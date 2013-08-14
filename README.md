@@ -88,3 +88,43 @@ Value Data:       [Path_Of_Bat_file]
 ----------------------------
 # Configuration about TCC/LE:
 - Copy the **tcstart.btm** to `%PROGRAMFILES%\JPSoft\TCCLE13`
+
+
+----------------------------
+# Configuration about Ansicon:
+The color prompt reference: http://adoxa.hostmyway.net/ansicon/ANSI Prompt Colours.txt
+Brief Introduction:
+- **3x** and **4x**:
+    - **3x**: Front Color
+    - **4x**: Background Color
+- Basic format:`$E[a;3b;c;4dm` or `$E[0;a;3b;c;4dm`
+    - For example:
+        - $E[31;46m:        **Front color**: dark red; **Background color**: dark green ( == $E[0;31;46m == $E[0;31;6;46m)
+        - $E[1;31;46m:      **Front color**: light red; **Background color**: dark green ( == $E[1;31;1;46m)
+        - $E[1;31;4;46m:    **Front color**: light red; **Background color**: light green
+    - a (control dark/light front color):
+        - 0 == a: Set the **dark** front color
+        - 1 == a: Set the **light** front color
+    - b (front color):
+        - 1: Red
+        - 2: Green
+        - 3: Yellow
+        - 4: Blue
+        - 5: Magenta
+        - 6: Cyan
+        - 7: White
+    - c (control dark/light/reversal background color): 
+        - 0 == c: Set front color as dark white
+        - 4 == c: Set **light** background color
+        - 1 or 6 == c: Set **dark** background color
+        - 7 == c: Reversal the front color and background color
+    - d (background color):
+        - 1: Red
+        - 2: Green
+        - 3: Yellow
+        - 4: Blue
+        - 5: Magenta
+        - 6: Cyan
+        - 7: White
+- Examples:
+![ansiconcolor]()
