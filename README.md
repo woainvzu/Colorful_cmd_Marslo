@@ -13,7 +13,7 @@ Truth:
 
 ## Steps:
 - ANSICON:
-    - Download Ansicon from http://adoxa.3eeweb.com/ansicon/
+    - Download Ansicon from http://adoxa.hostmyway.net/ansicon/ or https://github.com/adoxa/ansicon
     - Install:
 <pre><code>> cd ansi161\x86\
 > ansicon.exe -i
