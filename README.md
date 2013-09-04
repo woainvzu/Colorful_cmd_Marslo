@@ -94,7 +94,8 @@ Truth:
 # Configuration about Console:
 - Copy the **console.xml** to `%APPDATA%\Console` folder
 - If the console is from [pythonxy](https://code.google.com/p/pythonxy/)
-    - Copy `pythonxy\console\` to `$PYTHONXYHOME\console`. For example, copy it to `C:\pythonxy\console\`
+    - Copy `pythonxy\console\` to `$PYTHONXYHOME\console`. 
+    - For example, copy it to `C:\pythonxy\console\`
 
 ## Tabs in pythonxy console:
 - Tab1: Marslo - IPython (sh)
@@ -166,8 +167,7 @@ $HOST.UI.RawUI.CursorSize = 6
 
 ## Some tips
 - Profile issue:
-    - Problem:
-    <pre><code>Microsoft.PowerShell_profile.ps1 cannot be loaded</code><pre>
+    - Problem:<pre><code>Microsoft.PowerShell_profile.ps1 cannot be loaded</code></pre>
     - Fix method:
     <pre><code>> Set-ExecutionPolicy -ExecutionPolicy Unrestricted
     > Get-ExecutionPolicy
