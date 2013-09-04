@@ -5,7 +5,7 @@ l.      ls hidden file
 t.      tree the hidden file
 tree    tree .
 ..      cd ..
-al      cd "C:\Marslo\Job\Summa\FE Tools\LotusNotes\AutoLotusNotes"
+...     cd ..\..
 ats     cd "C:\Marslo\Job\Summa\FE Tools\AutoScritps"
 lno	cd "C:\Marslo\Job\Summa\FE Tools\AutoScripts\LotusNotesOpt"
 desk    cd "C:\Users\jiaoolii\Desktop"
@@ -13,5 +13,6 @@ prog    cd "C:\Program Files"
 gr      cd "c:\"
 gh      cd "C:\Users\jiaoolii"
 wp      cd "C:\Users\jiaoolii\Documents\WindowsPowerShell"
+subl    sublime
 ex      explorer.exe .
 openit  explorer.ext %1

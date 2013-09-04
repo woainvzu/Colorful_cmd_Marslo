@@ -4,7 +4,7 @@ Colorful_cmd_Marslo
 Make Windows default command line colorfully
 
 # The Colorful CMD Prompt
-Truth:  
+Truth:
 ![Truth](https://github.com/woainvzu/Colorful_cmd_Marslo/blob/master/Images/mycmd.png?raw=true)
 
 ## Needed Tools and files:
@@ -13,35 +13,44 @@ Truth:
 
 ## Steps:
 - ANSICON:
-    - Download Ansicon from http://adoxa.hostmyway.net/ansicon/ or https://github.com/adoxa/ansicon
+    - Download Ansicon from [HomePage](http://adoxa.hostmyway.net/ansicon/) or [GitHub](https://github.com/adoxa/ansicon)
     - Install:
-<pre><code>> cd ansi161\x86\
-> ansicon.exe -i
-</code></pre>
+    <pre><code>> cd ansi161\x86\
+    > ansicon.exe -i
+    </code></pre>
 
 - Create bat file:
     - Characters help by using :
-<pre><code>> prompt /?
-</code></pre>
+    <pre><code>> prompt /?
+    </code></pre>
 
     - Example (run.bat):
-<pre><code>@echo
-prompt $E[1;31m$d$E[1;32m$s$t$s$E[1;31m$g$g$s$E[0;33m
-</code></pre>
+    <pre><code>@echo
+    prompt $E[1;31m$d$E[1;32m$s$t$s$E[1;31m$g$g$s$E[0;33m
+    </code></pre>
 
 - Add bat file into Regedit:
     - Open Regedit: **Ctrl+R** -> **regedit**
     - Path: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Command Processor**
     Key:
-<pre><code>Type:             String
-Value Name:       AutoRun
-Value Data:       [Path_Of_Bat_file]
-</code></pre>
-    - E.g.:   
+    <pre><code>Type:             String
+    Value Name:       AutoRun
+    Value Data:       [Path_Of_Bat_file]
+    </code></pre>
+    - E.g.:
     ![Command_processor](https://github.com/woainvzu/Colorful_cmd_Marslo/blob/master/Images/Machine_Command%20Processor.png?raw=true)
 
 ----------------------------
 # Modify the Font in CMD
+- Path: `Regedit` -> `HKEY_CURRENT_USER` -> `Console`
+- Keyword: <pre><code>"CursorSize"=dword:00000006</code></pre>
+- For Example:
+<pre><code>[HKEY_CURRENT_USER\Console]
+"CursorSize"=dword:00000006
+
+[HKEY_CURRENT_USER\Console\%SystemRoot%_system32_cmd.exe]
+"CursorSize"=dword:00000006
+</code></pre>
 
 ## Add the customize Font:
 - Go to: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Console\TrueTypeFont
@@ -56,8 +65,11 @@ Value Data:       [Path_Of_Bat_file]
 '0000' =>    Courier New
 ...
 </code></pre>
-    - E.g.:  
+    - E.g.:
     ![font](https://github.com/woainvzu/Colorful_cmd_Marslo/blob/master/Images/font.png?raw=true)
+
+## Specified the cursor size:
+
 
 ## Set code page:
 - Running in command line: (or **chcp 850**)
@@ -67,7 +79,7 @@ Value Data:       [Path_Of_Bat_file]
 
 ## Settings:
 - **Right-Click** -> **Propties** -> **Font**
-- E.g.:   
+- E.g.:
 ![propties](https://github.com/woainvzu/Colorful_cmd_Marslo/blob/master/Images/Propties.png?raw=true)
 
 
@@ -76,19 +88,92 @@ Value Data:       [Path_Of_Bat_file]
 - Create **.cmd** file (E.g.: %WINDIR%\alias.cmd)
     - It can be copied from folder **Default_CommandLine\Aliases\**
 - Add the full file path into regist: **HKEY_CURRENT_USER\Software\Microsoft\Command Processor**
-    - CMD command: <pre><code>c:> reg add "HKCU\SOFTWARE\Microsoft\Command Processor" /v AutoRun /t REG_SZ /d "%WINDIR%\autorun.cmd"
+    - CMD command: <pre><code>c:> reg add "HKCU\SOFTWARE\Microsoft\Command Processor" /v AutoRun /t REG_SZ /d "%WINDIR%\alias.cmd"
     </code></pre>
-
 
 ----------------------------
 # Configuration about Console:
 - Copy the **console.xml** to `%APPDATA%\Console` folder
+- If the console is from [pythonxy](https://code.google.com/p/pythonxy/)
+    - Copy `pythonxy\console\` to `$PYTHONXYHOME\console`. For example, copy it to `C:\pythonxy\console\`
 
+## Tabs in pythonxy console:
+- Tab1: Marslo - IPython (sh)
+- Tab2: Marslo - Ipython (Qt)
+- Tab3: Python
+- Tab4: Command Line
+- Tab5: IPython (sh) [Original]
+- Tab6: Ipython (Qt) [Original]
+
+## Shortcut
+- `ctrl + s`: Open setting dialog
+- `Ctrl + F1`: Open Tab1
+- `Ctrl + F<N>`: Open Tab<N>
+- `Ctrl + 1`: Switch to Tab1
+- `Ctrl + <N>`: Switch to Tab<N>
+
+## Mouse setting
+- `Left + Shift`: Copy/clear selection
+- `Left + Ctrl`: Drag window
+- `Left`: Select text
+- `Right`: Paste text
 
 ----------------------------
 # Configuration about TCC/LE:
 - Copy the **tcstart.btm** to `%PROGRAMFILES%\JPSoft\TCCLE13`
 
+# PowserShell
+
+## Configuration
+- Open profile file:
+<pre><code>> gvim $PROFILE</code></pre>
+- Set cursor size:
+<pre><code>[Console]::CursorSize = 6
+$HOST.UI.RawUI.CursorSize = 6
+</code></pre>
+- List all files:
+<pre><code>function la
+{
+    $currentpath = Get-Location
+    Get-ChildItem $currentpath -force
+}
+</code></pre>
+- List all hidden file (start with ".")
+<pre><code>function l.
+{
+    # Get-ChildItem . -Force | Where-Object { $_.Attributes -like "*Hidden*" } | Select FullName
+    Get-ChildItem . -Force | Where-Object { $_.Attributes -like "*Hidden*" }
+}
+</code></pre>
+- Tree
+<pre><code>function tree
+{
+    $currentpath = Get-Location
+    Get-ChildItem $currentpath -recurse
+}
+</code></pre>
+- Go to some path
+<pre><code>function prog
+{
+    Set-Location "C:\Program Files"
+}
+</code></pre>
+- Cat some content
+<pre><code>function alias
+{
+   Get-Content "c:\WindowsPowerShell\aliases_Marslo.txt"
+}
+</code></pre>
+
+## Some tips
+- Profile issue:
+    - Problem:
+    <pre><code>Microsoft.PowerShell_profile.ps1 cannot be loaded</code><pre>
+    - Fix method:
+    <pre><code>> Set-ExecutionPolicy -ExecutionPolicy Unrestricted
+    > Get-ExecutionPolicy
+    > Get-ExecutionPolicy -list
+    </code></pre>
 
 ----------------------------
 # Configuration about Ansicon:
@@ -115,7 +200,7 @@ Value Data:       [Path_Of_Bat_file]
         - `5`: Magenta
         - `6`: Cyan
         - `7`: White
-    - c (control dark/light/reversal background color): 
+    - c (control dark/light/reversal background color):
         - `0 == c`: Set front color as dark white
         - `4 == c`: Set **light** background color
         - `1 or 6 == c`: Set **dark** background color

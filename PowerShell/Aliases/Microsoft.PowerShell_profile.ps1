@@ -1,7 +1,9 @@
 [Console]::CursorSize = 10
+$HOST.UI.RawUI.CursorSize = 6
 Set-Alias c Clear-Host
 Set-Alias l Get-ChildItem
 Set-Alias l color-ls
+Set-Alias subl "C:\Program Files\Sublime Text 3\sublime_text.exe"
 function la
 {
     $currentpath = Get-Location
@@ -25,17 +27,17 @@ function ..
 {
     Set-Location ..
 }
-function al
+function ...
 {
-    Set-Location "C:\Marslo\Job\Summa\FE Tools\LotusNotes\AutoLotusNotes"
+    Set-Location ..\..
 }
 function ats
 {
-    Set-Location "C:\Marslo\Job\Summa\FE Tools\AutoScritps"
+    Set-Location "C:\Marslo\Job\Codes"
 }
 function lno
 {
-    Set-Location "C:\Marslo\Job\Summa\FE Tools\AutoScritps\LotusNotesOpt"
+    Set-Location "C:\Marslo\Job\Codes\LotusNotesOpt"
 }
 function desk
 {
@@ -118,7 +120,6 @@ function color-ls {
 
 function prompt
 {
-
     # Set Window Title
     $host.UI.RawUI.WindowTitle = "$ENV:USERNAME@$ENV:COMPUTERNAME - $(Get-Location)"
 
@@ -151,3 +152,14 @@ function prompt
         # )
     # "C:/Marslo/Tools/Softwares/Programming/Ruby/Devkit/bin/grep.exe" $strs . | "C:/Marslo/Tools/Softwares/Programming/Ruby/Devkit/bin/grep.exe" -v '\.svn\|\.git\|tags'
 # }
+
+# --- Shortcuts ---
+# begin
+# {
+  # $WshShell = New-Object -ComObject WScript.Shell;
+# }
+# process
+# {
+  # $WshShell.CreateShortcut($_)
+# }
+
