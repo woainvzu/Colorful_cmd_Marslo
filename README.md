@@ -47,7 +47,6 @@ Truth:
 - For Example:
 <pre><code>[HKEY_CURRENT_USER\Console]
 "CursorSize"=dword:00000006
-
 [HKEY_CURRENT_USER\Console\%SystemRoot%_system32_cmd.exe]
 "CursorSize"=dword:00000006
 </code></pre>
